@@ -7,10 +7,11 @@ plugins {
 	war
 	kotlin("jvm") version "1.2.71"
 	kotlin("plugin.spring") version "1.2.71"
+	id ("io.github.ddimtirov.codacy") version "0.1.0"
 }
 
 group = "pl.radoslawdabrowski"
-version = "0.0.1-SNAPSHOT"
+version = "0.0.1"
 java.sourceCompatibility = JavaVersion.VERSION_1_8
 
 repositories {
