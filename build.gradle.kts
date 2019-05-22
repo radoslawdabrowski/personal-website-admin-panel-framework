@@ -15,12 +15,12 @@ version = "0.0.1"
 java.sourceCompatibility = JavaVersion.VERSION_1_8
 
 repositories {
+	maven { setUrl("http://dl.bintray.com/typesafe/maven-releases/com/typesafe/netty/netty-http-pipelining/") }
 	mavenCentral()
 }
 
 dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-actuator")
-	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
 	implementation("org.springframework.boot:spring-boot-starter-data-mongodb")
 	implementation("org.springframework.boot:spring-boot-starter-security")
 	implementation("org.springframework.boot:spring-boot-starter-thymeleaf")
@@ -39,4 +39,8 @@ tasks.withType<KotlinCompile> {
 		freeCompilerArgs = listOf("-Xjsr305=strict")
 		jvmTarget = "1.8"
 	}
+}
+
+codacy {
+	toolVersion = "2.0.0"
 }
