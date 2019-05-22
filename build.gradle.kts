@@ -8,6 +8,7 @@ plugins {
 	kotlin("jvm") version "1.2.71"
 	kotlin("plugin.spring") version "1.2.71"
 	id ("io.github.ddimtirov.codacy") version "0.1.0"
+	jacoco
 }
 
 group = "pl.radoslawdabrowski"
@@ -41,6 +42,18 @@ tasks.withType<KotlinCompile> {
 	}
 }
 
+tasks.jacocoTestReport {
+	reports {
+		xml.isEnabled = true
+	}
+}
+
+
 codacy {
 	toolVersion = "2.0.0"
+	
+}
+
+jacoco {
+	toolVersion = "0.8.3"
 }
