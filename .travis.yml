@@ -19,7 +19,7 @@ cache:
     - $HOME/.gradle/wrapper/
   
 scripts:
-  - ./gradlew build --scan -s
+  - ./gradlew build
   - ./gradlew codacyUpload
 
 before_install:
