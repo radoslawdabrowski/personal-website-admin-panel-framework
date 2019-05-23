@@ -13,7 +13,7 @@ plugins {
 
 group = "pl.radoslawdabrowski"
 version = "0.0.1"
-java.sourceCompatibility = JavaVersion.VERSION_1_8
+java.sourceCompatibility = JavaVersion.VERSION_12
 
 repositories {
 	maven { setUrl("http://dl.bintray.com/typesafe/maven-releases/com/typesafe/netty/netty-http-pipelining/") }
@@ -48,12 +48,6 @@ tasks.jacocoTestReport {
 	}
 }
 
-
 codacy {
 	toolVersion = "2.0.0"
-	
-}
-
-jacoco {
-	toolVersion = "0.8.3"
 }
