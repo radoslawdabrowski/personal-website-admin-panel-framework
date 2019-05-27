@@ -1,28 +1,26 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.w3.org/1999/xhtml">
 <head>
-    <title layout:title-pattern="$LAYOUT_TITLE - $CONTENT_TITLE">Igorski.co</title>
+    <title layout:title-pattern="$LAYOUT_TITLE - $CONTENT_TITLE">Admin</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
     <link th:href="@{/webjars/bootstrap/4.3.1/css/bootstrap.min.css}" rel="stylesheet" media="screen"/>
+    <link th:href="@{/css/styles.min.css}" rel="stylesheet" media="screen" />
 </head>
 <body>
-<!--<div th:replace="fragments/header :: header"> This header content is going to be replaced.</div>-->
+<div th:replace="fragments/header :: header">
+    header
+</div>
 <div class="container">
     <div class="row">
-        <div class="col-2" layout:fragment="sidebar">
-            <h1>This is the layout's sidebar</h1>
-            <p>This content will be replaced if the page
-                using the layout also defines a layout:fragment="sidebar" segment.</p>
-        </div>
         <div class="col" layout:fragment="content">
-            <h1>This is the Layout's main section</h1>
-            <p>This content will be replaced if the page
-                using the layout also defines a layout:fragment="content" segment. </p>
+            content
         </div>
     </div>
 </div>
-<footer th:insert="fragments/footer :: footer" class="footer">
-    This content will remain, but other content will be inserted after it.
+<footer th:replace="fragments/footer :: footer" class="footer">
+    footer
 </footer>
 </body>
 </html>
