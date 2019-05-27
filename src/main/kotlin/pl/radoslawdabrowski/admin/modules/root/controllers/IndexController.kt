@@ -7,6 +7,8 @@ import org.springframework.ui.Model
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RequestMethod
 import pl.radoslawdabrowski.admin.modules.root.services.DashboardService
+import pl.radoslawdabrowski.admin.utils.const.Paths
+import pl.radoslawdabrowski.admin.utils.const.Views
 
 @Controller
 class IndexController {
@@ -16,10 +18,10 @@ class IndexController {
     @Autowired
     private lateinit var service: DashboardService
 
-    @RequestMapping(value = ["/"], method = [RequestMethod.GET])
+    @RequestMapping(value = [Paths.DASHBOARD], method = [RequestMethod.GET])
     fun index(model : Model) : String {
         model.addAllAttributes(service.getInfo())
-        return "index"
+        return Views.INDEX.html
     }
 
 }
