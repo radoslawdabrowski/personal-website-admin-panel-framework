@@ -1,16 +1,23 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
-<head lang="en">
-    <title>Spring with Spring Boot, Spring MVC, and Kotlin</title>
-    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.w3.org/1999/xhtml" layout:decorate="~{layouts/layout}">
+<head>
+    <title>Home Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link th:href="@{/css/core.css}" rel="stylesheet" media="screen" />
 </head>
 <body>
-<!--/*@thymesVar id="test" type="java.lang.String"*/-->
-<h1 th:text="${test}"></h1>
-<!--/*@thymesVar id="test2" type="java.lang.String"*/-->
-<h2 th:text="${test2}"></h2>
-
-<h1>Hello World!</h1>
-<h2>This is my index page</h2>
+<div class="container">
+    <div class="row">
+        <div class="col-2" layout:fragment="sidebar">
+            <h1>Sidebar</h1>
+            <a href="#">Login</a>
+        </div>
+        <div class="col" layout:fragment="content">
+            <h1>Welcome to the Index page</h1>
+            <br>This content is replacing the content of the layout:fragment="content"<br>
+            placeholder in layout.html</p>
+        </div>
+    </div>
+</div>
 </body>
 </html>
