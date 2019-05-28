@@ -19,8 +19,8 @@ cache:
     - $HOME/.gradle/wrapper/
 
 script:
-  - ./gradlew build
-  - ./gradlew codacyUpload
+  - ./gradlew build --stacktrace
+  - ./gradlew codacyUpload --stacktrace
 
 before_install:
   - chmod +x gradlew
