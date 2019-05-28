@@ -20,3 +20,5 @@
 </h5>
 
 Administration application for  [radoslawdabrowski.pl](https://radoslawdabrowski.pl), my personal website.
+<br><br>
+I used this project to learn [Kotlin Programming Language](https://kotlinlang.org).

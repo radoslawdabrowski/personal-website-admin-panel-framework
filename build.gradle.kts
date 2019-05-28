@@ -13,7 +13,7 @@ plugins {
 
 group = "pl.radoslawdabrowski"
 version = "0.0.1"
-java.sourceCompatibility = JavaVersion.VERSION_1_8
+java.sourceCompatibility = JavaVersion.VERSION_12
 
 repositories {
 	maven { setUrl("http://dl.bintray.com/typesafe/maven-releases/com/typesafe/netty/netty-http-pipelining/") }
@@ -29,6 +29,9 @@ dependencies {
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
+	implementation("nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect:2.4.1")
+	implementation("org.webjars:bootstrap:4.3.1")
+
 	runtimeOnly("org.springframework.boot:spring-boot-devtools")
 	providedRuntime("org.springframework.boot:spring-boot-starter-tomcat")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
@@ -48,12 +51,6 @@ tasks.jacocoTestReport {
 	}
 }
 
-
 codacy {
 	toolVersion = "2.0.0"
-	
-}
-
-jacoco {
-	toolVersion = "0.8.3"
 }
