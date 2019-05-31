@@ -18,7 +18,7 @@ class DashboardServiceImpl : DashboardService{
             println("The elem: ${it.name}")
         }
 
-        return hashMapOf(Pair("test","wartosc"), Pair("test2", "wartosc2"))
+        return hashMapOf("test" to "wartosc", "test2" to "wartosc2")
 
 //        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
