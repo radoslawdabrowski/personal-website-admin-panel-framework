@@ -2,7 +2,7 @@ spring:
   data:
     mongodb:
       host: 127.0.0.1
-      port: 27017
+      port: ${database_port}
       database: ${database}
 server:
-  port: 9999
+  port: ${port}
