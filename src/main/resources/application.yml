@@ -5,4 +5,4 @@ spring:
       port: ${database_port}
       database: ${database}
 server:
-  port: ${port}
+  port: ${port:8080}

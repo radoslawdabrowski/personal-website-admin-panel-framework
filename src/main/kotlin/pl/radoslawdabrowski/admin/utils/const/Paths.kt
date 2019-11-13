@@ -11,6 +11,11 @@ class Paths {
         const val REFERENCES = "/references"
         const val ABOUT = "/about"
         const val ATTRIBUTES = "/attributes"
+        const val LOGIN = "/login"
+        const val LOGOUT = "/logout"
+        private const val PASSWORD = "/password"
+        const val PASSWORD_RESET = "$PASSWORD/reset"
+        const val PASSWORD_CHANVE = "$PASSWORD/change/{token}"
     }
 
 }
