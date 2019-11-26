@@ -22,6 +22,7 @@ class AuthenticationController {
     @RequestMapping(value = [Paths.LOGIN], method = [RequestMethod.GET])
     fun login(model : Model) : String {
         logger.debug("Rendering Login page")
+        model.addAllAttributes(authenticationService.renderLoginView())
         return Views.LOGIN.html
     }
 

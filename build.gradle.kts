@@ -31,7 +31,12 @@ dependencies {
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 	implementation("nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect:2.4.1")
 	implementation("org.webjars:bootstrap:4.3.1")
+	implementation("org.mapstruct:mapstruct:1.3.0.Final")
+	implementation("org.projectlombok:lombok:1.18.10")
 
+	annotationProcessor("org.mapstruct:mapstruct-processor:1.3.0.Final")
+
+	compileOnly("ch.qos.logback:logback-classic:1.2.3")
 	runtimeOnly("org.springframework.boot:spring-boot-devtools")
 	providedRuntime("org.springframework.boot:spring-boot-starter-tomcat")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
