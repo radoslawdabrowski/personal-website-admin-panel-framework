@@ -5,7 +5,7 @@ class Resource {
     companion object {
         const val CSS = "/css/**"
         const val JS = "/js/**"
-        const val RESOURCES = "/resources/**"
+        const val RESOURCES = "/webjars/**"
         const val IMAGES = "/images/**"
     }
 }
