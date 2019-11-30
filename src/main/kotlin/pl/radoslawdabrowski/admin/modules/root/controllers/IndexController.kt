@@ -21,6 +21,7 @@ class IndexController {
     @RequestMapping(value = [Paths.DASHBOARD], method = [RequestMethod.GET])
     fun index(model : Model) : String {
         logger.debug("Rendering index page")
+
         model.addAllAttributes(service.getInfo())
         return Views.INDEX.html
     }

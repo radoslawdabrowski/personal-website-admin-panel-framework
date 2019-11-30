@@ -6,4 +6,6 @@ interface AuthenticationService {
     fun resetPassword(login : String)
     fun changePasswordOnReset(token : String)
 
+    fun renderLoginView() : Collection<*>
+
 }
