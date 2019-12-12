@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.w3.org/1999/xhtml">
-<head>
-    <title layout:title-pattern="$LAYOUT_TITLE - $CONTENT_TITLE">Admin</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <head>
+        <title layout:title-pattern="$LAYOUT_TITLE - $CONTENT_TITLE">Admin</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link th:href="@{/webjars/bootstrap/4.3.1/css/bootstrap.min.css}" rel="stylesheet" media="screen"/>
-    <link th:href="@{/css/styles.min.css}" rel="stylesheet" media="screen" />
-</head>
-<body>
-<div th:replace="fragments/header :: header">
-    header
-</div>
-<div class="container">
-    <div class="row">
-        <div class="col" layout:fragment="content">
-            content
+        <link th:href="@{/webjars/bootstrap/4.3.1/css/bootstrap.min.css}" rel="stylesheet" media="screen"/>
+        <link th:href="@{/css/styles.min.css}" rel="stylesheet" media="screen" />
+    </head>
+    <body>
+        <div th:replace="fragments/header :: header">
+            header
         </div>
-    </div>
-</div>
-<footer th:replace="fragments/footer :: footer" class="footer">
-    footer
-</footer>
-</body>
+        <div class="container">
+            <div class="row">
+                <div class="col" layout:fragment="content">
+                    content
+                </div>
+            </div>
+        </div>
+        <footer th:replace="fragments/footer :: footer" class="footer">
+            footer
+        </footer>
+    </body>
 </html>
