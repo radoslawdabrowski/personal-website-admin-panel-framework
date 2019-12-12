@@ -20,7 +20,12 @@ class SecurityConfiguration : WebSecurityConfigurerAdapter() {
 
     override fun configure(http : HttpSecurity) {
         http.authorizeRequests()
-                .anyRequest().fullyAuthenticated()
+                .antMatchers(Resource.PASSWORD)
+                .permitAll()
+                .and()
+                .authorizeRequests()
+                .anyRequest()
+                .fullyAuthenticated()
                 .and()
                 .formLogin()
                 .loginPage(Paths.LOGIN)

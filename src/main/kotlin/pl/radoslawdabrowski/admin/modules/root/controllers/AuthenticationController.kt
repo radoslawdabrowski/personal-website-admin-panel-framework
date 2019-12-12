@@ -38,8 +38,8 @@ class AuthenticationController {
         return Views.PASSWORD_RESET.html
     }
 
-    @RequestMapping(value = [Paths.PASSWORD_CHANVE])
-    fun passwordChange(model: Model, @PathVariable token : String) : String {
+    @RequestMapping(value = [Paths.PASSWORD_CHANGE], method = [RequestMethod.GET])
+    fun passwordChange(@PathVariable token : String, model: Model) : String {
         logger.debug("Rendering password reset page")
         model.addAttribute("token", token)
         return Views.PASSWORD_CHANGE.html

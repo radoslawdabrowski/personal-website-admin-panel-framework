@@ -7,5 +7,6 @@ class Resource {
         const val JS = "/js/**"
         const val RESOURCES = "/webjars/**"
         const val IMAGES = "/images/**"
+        const val PASSWORD = Paths.PASSWORD + "/**"
     }
 }
