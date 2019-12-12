@@ -29,20 +29,22 @@ class AuthenticationController {
     @RequestMapping(value = [Paths.LOGOUT], method = [RequestMethod.GET])
     fun logout(model: Model) : String {
         logger.debug("Rendering Login page")
+
+        //todo do logout
         return Views.LOGIN.html
     }
 
     @RequestMapping(value = [Paths.PASSWORD_RESET], method = [RequestMethod.GET])
     fun passwordReset(model: Model) : String {
         logger.debug("Rendering password change page")
-        return Views.PASSWORD_RESET.html
+        return Views.PASSWORD.RESET.html
     }
 
     @RequestMapping(value = [Paths.PASSWORD_CHANGE], method = [RequestMethod.GET])
     fun passwordChange(@PathVariable token : String, model: Model) : String {
         logger.debug("Rendering password reset page")
         model.addAttribute("token", token)
-        return Views.PASSWORD_CHANGE.html
+        return Views.PASSWORD.CHANGE.html
     }
 
 }
