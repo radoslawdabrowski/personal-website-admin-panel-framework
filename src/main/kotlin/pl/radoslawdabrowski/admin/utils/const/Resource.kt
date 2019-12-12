@@ -8,5 +8,13 @@ class Resource {
         const val RESOURCES = "/webjars/**"
         const val IMAGES = "/images/**"
         const val PASSWORD = Paths.PASSWORD + "/**"
+
+        val SWAGGER = arrayOf(
+                "/v2/api-docs",
+                "/swagger-resources/**",
+                "/configuration/security",
+                "/configuration/ui",
+                "/swagger-ui.html"
+        )
     }
 }

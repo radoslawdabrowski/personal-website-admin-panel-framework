@@ -36,6 +36,9 @@ dependencies {
 
 	annotationProcessor("org.mapstruct:mapstruct-processor:1.3.0.Final")
 
+	compile("io.springfox:springfox-swagger2:2.7.0")
+	compile("io.springfox:springfox-swagger2:2.7.0")
+
 	compileOnly("ch.qos.logback:logback-classic:1.2.3")
 	runtimeOnly("org.springframework.boot:spring-boot-devtools")
 	providedRuntime("org.springframework.boot:spring-boot-starter-tomcat")
